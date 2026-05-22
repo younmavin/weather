@@ -1,0 +1,329 @@
+body {
+  background: #f2f2f2;
+  font-family: 'NanumSquareNeo';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  .app {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    .search-bx {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-sizing: border-box;
+      color: #000;
+      border-radius: 50px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+      input {
+        width: calc(100% - 45px);
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-family: 'NanumSquareNeo';
+      }
+      button {
+        background: none;
+        border: none;
+      }
+    }
+    #weather {
+      margin-top: 30px;
+      .today-wrap {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 30px;
+        box-shadow:
+          rgba(17, 17, 26, 0.05) 0px 4px 16px,
+          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        .current-weather {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          h2 {
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            img {
+              -webkit-filter: grayscale(100%) brightness(0);
+              filter: grayscale(100%) brightness(0);
+            }
+          }
+          .temp-wrap {
+            display: flex;
+            align-items: center;
+            img {
+              transform: translateX(-25px);
+            }
+            .temp {
+              font-size: 50px;
+              font-weight: bold;
+              transform: translateX(-35px);
+            }
+          }
+          .right {
+            li {
+              margin-bottom: 10px;
+              color: #909090;
+              font-size: 14px;
+              text-align: end;
+              display: flex;
+              align-items: center;
+              gap: 1px;
+            }
+          }
+        }
+        .today-comment {
+          background-color: #eeeeee;
+          text-align: center;
+          padding: 50px;
+          box-sizing: border-box;
+          font-family: 18px;
+          word-break: keep-all;
+          text-wrap: balance;
+          border-radius: 30px;
+        }
+
+        .hourly-wrap {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          overflow-x: scroll;
+          margin-top: 30px;
+          .hour-card {
+            width: 25%;
+            min-width: 140px;
+            max-width: 140px;
+            text-align: center;
+            > img {
+              transform: translateY(-20px);
+            }
+            ul {
+              transform: translateY(-35px);
+              li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1px;
+                &:first-child {
+                  font-size: 17px;
+                  font-weight: 700;
+                }
+                img {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+      .dust-wrap {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 30px;
+        margin-top: 30px;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        box-shadow:
+          rgba(17, 17, 26, 0.05) 0px 4px 16px,
+          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        .dust-card {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          &.good {
+            .bar {
+              &::after {
+                height: 80%;
+              }
+            }
+          }
+          &.good {
+            .normal {
+              &::after {
+                height: 50%;
+              }
+            }
+          }
+          &.bad {
+            .normal {
+              &::after {
+                height: 20%;
+              }
+            }
+          }
+          h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+          p {
+            &:last-child {
+              font-weight: 700;
+              font-size: 16px;
+            }
+          }
+          &:first-child {
+            .bar {
+              background-color: #75d75271;
+              &::after {
+                background-color: #75d752;
+              }
+            }
+          }
+          &:last-child {
+            .bar {
+              background-color: #fdb9195d;
+              &::after {
+                background-color: #fdba19;
+              }
+            }
+          }
+        }
+        .bar {
+          width: 15px;
+          height: 100px;
+          background-color: #ccc;
+          border-radius: 50px;
+          position: relative;
+          overflow: hidden;
+
+          &::after {
+            content: '';
+            width: 100%;
+            height: 50%;
+            background-color: #000;
+            bottom: 0;
+            position: absolute;
+          }
+        }
+      }
+      .forecast-wrap {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 30px;
+        margin-top: 30px;
+        border: 1px solid #ccc;
+        box-shadow:
+          rgba(17, 17, 26, 0.05) 0px 4px 16px,
+          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        .forecast-card {
+          margin-bottom: 30px;
+          display: flex;
+          gap: 50px;
+          align-items: center;
+          justify-content: space-between;
+          transition: 0.2s;
+          padding: 10px;
+          border-radius: 15px;
+          cursor: pointer;
+          &:hover {
+            background-color: #f3f1f18c;
+          }
+          &.active {
+            background-color: #f3f1f18c;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .date-wrap {
+            .day {
+              font-size: 16px;
+              font-weight: 700;
+              margin-bottom: 3px;
+            }
+            .date {
+              color: #909090;
+              font-size: 14px;
+            }
+          }
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            li {
+              display: flex;
+              gap: 5px;
+              &:first-child {
+                gap: 1px;
+                img {
+                  width: 20px;
+                }
+              }
+              img {
+                display: block;
+                width: 45px;
+              }
+              .humidity {
+                color: #909090;
+              }
+              span {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    .app {
+      #weather {
+        .today-wrap {
+          padding: 20px;
+          .current-weather {
+            flex-direction: column;
+            align-items: start;
+          }
+          .today-comment {
+            padding: 20px;
+            border-radius: 20px;
+          }
+          .hourly-wrap {
+            gap: 10px;
+          }
+        }
+        .dust-wrap {
+          gap: 030px;
+          padding: 20px;
+        }
+        .forecast-wrap {
+          padding: 0;
+          overflow: hidden;
+          .forecast-card {
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+            border-radius: 0;
+            padding: 20px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            border-bottom: 1px solid #ccc;
+            gap: 0;
+            &:last-child {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

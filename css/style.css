@@ -1,0 +1,292 @@
+body {
+  background: #f2f2f2;
+  font-family: "NanumSquareNeo";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+body .app {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+body .app .search-bx {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #000;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+body .app .search-bx input {
+  width: calc(100% - 45px);
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: "NanumSquareNeo";
+}
+body .app .search-bx button {
+  background: none;
+  border: none;
+}
+body .app #weather {
+  margin-top: 30px;
+}
+body .app #weather .today-wrap {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+body .app #weather .today-wrap .current-weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+body .app #weather .today-wrap .current-weather h2 {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+body .app #weather .today-wrap .current-weather h2 img {
+  filter: grayscale(100%) brightness(0);
+}
+body .app #weather .today-wrap .current-weather .temp-wrap {
+  display: flex;
+  align-items: center;
+}
+body .app #weather .today-wrap .current-weather .temp-wrap img {
+  transform: translateX(-25px);
+}
+body .app #weather .today-wrap .current-weather .temp-wrap .temp {
+  font-size: 50px;
+  font-weight: bold;
+  transform: translateX(-35px);
+}
+body .app #weather .today-wrap .current-weather .right li {
+  margin-bottom: 10px;
+  color: #909090;
+  font-size: 14px;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+body .app #weather .today-wrap .today-comment {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+  font-family: 18px;
+  word-break: keep-all;
+  text-wrap: balance;
+  border-radius: 30px;
+}
+body .app #weather .today-wrap .hourly-wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow-x: scroll;
+  margin-top: 30px;
+}
+body .app #weather .today-wrap .hourly-wrap .hour-card {
+  width: 25%;
+  min-width: 140px;
+  max-width: 140px;
+  text-align: center;
+}
+body .app #weather .today-wrap .hourly-wrap .hour-card > img {
+  transform: translateY(-20px);
+}
+body .app #weather .today-wrap .hourly-wrap .hour-card ul {
+  transform: translateY(-35px);
+}
+body .app #weather .today-wrap .hourly-wrap .hour-card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+body .app #weather .today-wrap .hourly-wrap .hour-card ul li:first-child {
+  font-size: 17px;
+  font-weight: 700;
+}
+body .app #weather .today-wrap .hourly-wrap .hour-card ul li img {
+  display: block;
+}
+body .app #weather .dust-wrap {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+body .app #weather .dust-wrap .dust-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+body .app #weather .dust-wrap .dust-card.good .bar::after {
+  height: 80%;
+}
+body .app #weather .dust-wrap .dust-card.good .normal::after {
+  height: 50%;
+}
+body .app #weather .dust-wrap .dust-card.bad .normal::after {
+  height: 20%;
+}
+body .app #weather .dust-wrap .dust-card h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+body .app #weather .dust-wrap .dust-card p:last-child {
+  font-weight: 700;
+  font-size: 16px;
+}
+body .app #weather .dust-wrap .dust-card:first-child .bar {
+  background-color: rgba(117, 215, 82, 0.4431372549);
+}
+body .app #weather .dust-wrap .dust-card:first-child .bar::after {
+  background-color: #75d752;
+}
+body .app #weather .dust-wrap .dust-card:last-child .bar {
+  background-color: rgba(253, 185, 25, 0.3647058824);
+}
+body .app #weather .dust-wrap .dust-card:last-child .bar::after {
+  background-color: #fdba19;
+}
+body .app #weather .dust-wrap .bar {
+  width: 15px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+body .app #weather .dust-wrap .bar::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  background-color: #000;
+  bottom: 0;
+  position: absolute;
+}
+body .app #weather .forecast-wrap {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+body .app #weather .forecast-wrap .forecast-card {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.2s;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+body .app #weather .forecast-wrap .forecast-card:hover {
+  background-color: rgba(243, 241, 241, 0.5490196078);
+}
+body .app #weather .forecast-wrap .forecast-card.active {
+  background-color: rgba(243, 241, 241, 0.5490196078);
+}
+body .app #weather .forecast-wrap .forecast-card:last-child {
+  margin-bottom: 0;
+}
+body .app #weather .forecast-wrap .forecast-card .date-wrap .day {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+body .app #weather .forecast-wrap .forecast-card .date-wrap .date {
+  color: #909090;
+  font-size: 14px;
+}
+body .app #weather .forecast-wrap .forecast-card ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+body .app #weather .forecast-wrap .forecast-card ul li {
+  display: flex;
+  gap: 5px;
+}
+body .app #weather .forecast-wrap .forecast-card ul li:first-child {
+  gap: 1px;
+}
+body .app #weather .forecast-wrap .forecast-card ul li:first-child img {
+  width: 20px;
+}
+body .app #weather .forecast-wrap .forecast-card ul li img {
+  display: block;
+  width: 45px;
+}
+body .app #weather .forecast-wrap .forecast-card ul li .humidity {
+  color: #909090;
+}
+body .app #weather .forecast-wrap .forecast-card ul li span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 576px) {
+  body .app #weather .today-wrap {
+    padding: 20px;
+  }
+  body .app #weather .today-wrap .current-weather {
+    flex-direction: column;
+    align-items: start;
+  }
+  body .app #weather .today-wrap .today-comment {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  body .app #weather .today-wrap .hourly-wrap {
+    gap: 10px;
+  }
+  body .app #weather .dust-wrap {
+    gap: 30px;
+    padding: 20px;
+  }
+  body .app #weather .forecast-wrap {
+    padding: 0;
+    overflow: hidden;
+  }
+  body .app #weather .forecast-wrap .forecast-card {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    border-radius: 0;
+    padding: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ccc;
+    gap: 0;
+  }
+  body .app #weather .forecast-wrap .forecast-card:last-child {
+    border-bottom: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
